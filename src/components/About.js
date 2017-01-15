@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Colors from '../constants/colors';
 import './style.css';
 
 class About extends React.Component {
@@ -10,7 +12,7 @@ class About extends React.Component {
   }
   render(){
     return(
-      <div>
+      <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
         <h1>About</h1>
       </div>
     );

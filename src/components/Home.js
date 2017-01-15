@@ -1,10 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router';
 
 import './style.css';
 import Colors from '../constants/colors';
+import bio from '../text/bio';
 
-const profilePicPath = require('../assets/profile.png');
+const profilePicPath = require('../assets/profile-traced.png');
+
+const defText = `
+1. A Software Engineering student at the University of Waterloo.
+2. A passionate learner, a stubborn tinkerer, a pursuer of diverse skills.
+`;
 
 class Home extends React.Component {
   constructor(props) {
@@ -15,36 +20,21 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <div className="fullscreen">
-        <div className="main-panel">
-          <div className="main-tile section-wrapper" style={{backgroundColor: Colors.almostWhite}}>
-            <div className="section-content">
-              <div className="title"><strong>David</strong> Kang</div>
-              <div className="bar" />
-              <h2>curious. creative. committed.</h2>
-            </div>
-          </div>
+      <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
+        <div className="title-wrapper">
+          <div className="title"><strong>David</strong> Kang</div>
+          <div className="bar" />
+          <h1>curious. creative. committed.</h1>
         </div>
-        <div className="side-panel">
-          <Link to="about" className="side-tile section-wrapper" style={{backgroundColor: Colors.navyBlue}}>
-            <div className="section-content">
-              <h1>PROJECTS</h1>
-              <div className="bar" />
-            </div>
-          </Link>
-          <Link to="about" className="side-tile section-wrapper" style={{backgroundColor: Colors.warmYellow}}>
-            <div className="section-content">
-              <h1>BLOG</h1>
-              <div className="bar" />
-            </div>
-          </Link>
-          <Link to="about" className="side-tile section-wrapper" style={{backgroundColor: Colors.gunmetal}}>
-            <div className="section-content">
-              <h1>CONNECT</h1>
-              <div className="bar" />
-            </div>
-          </Link>
-        </div>
+        <div className="gap-5" />
+        <p>{bio}</p>
+          {/*<div className="profile">
+            <img src={profilePicPath} style={{overflow: "hidden"}} />
+          </div>*/}
+        <div style={{fontSize: "500%", fontFamily: "Futura"}}><strong>David</strong> Kang</div>
+        <div style={{fontSize: "200%"}}>|dey-vid kæng|</div>
+        <div className="gap-5" />
+        <p><i>n.</i> {defText}</p>
       </div>
     );
   }

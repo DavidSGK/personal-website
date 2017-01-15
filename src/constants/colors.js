@@ -7,7 +7,8 @@ const Colors = {
   gunmetal: "#233237",
   rustyRed: "#984B43",
   warmYellow: "#EAC67A",
-  almostWhite: "#F4F7F6" 
+  almostWhite: "#F4F7F6",
+  blueGrey: "#37474F"
 }
 
 export default Colors;
