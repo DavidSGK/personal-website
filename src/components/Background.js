@@ -19,6 +19,8 @@ class Background extends React.Component {
     };
 
     var space = new Pt.CanvasSpace("pt").setup({bgcolor: Colors.blueGrey});
+    var wall = new Pt.Line(space.size.$multiply(0.33, 0.33)).to(space.size.$multiply(0.66, 0.66));
+    var bound = new Pt.Pair().to(space.size);
 
     var form = new Pt.Form(space);
     form.stroke(false);
@@ -44,7 +46,7 @@ class Background extends React.Component {
         this.to([x-length/2, y-length/2*Math.sqrt(3)], [x+length/2, y-length/2*Math.sqrt(3)]);
         //this.color = colors["a"+Math.ceil(Math.random()*4)];
         this.color = "#DDDDDD";
-        this.direction = new Pt.Vector((Math.random()-0.5) * 5, (Math.random()-0.5) * 5);
+        this.direction = new Pt.Vector((Math.random()-0.5) * 6, (Math.random()-0.5) * 6);
         this.maxAge = Math.random() * 1000;
         this.age = this.maxAge
       }
@@ -55,9 +57,23 @@ class Background extends React.Component {
         this.moveBy(this.direction);
         this.age -= 0.5;
         this.color = Pt.Util.toRGBColor("#DDDDDD", true, this.age/this.maxAge);
-        if(this.age < 0){
+        if(this.age < 0 || this.x < -10 || this.x > space.size.x + 10|| this.y < -10 || this.y > space.size.y + 10){
           space.remove(this);
         }
+      }
+    }
+
+    class ParticleTrack extends Pt.Particle {
+      constructor(x, y, radius){
+        super(x, y, radius);
+        this.direction = new Pt.Vector((Math.random()-0.5) * 5, (Math.random()-0.5) * 5);
+      }
+      animate(time, fps, context){
+        form.fill("#FFFFFF");
+        form.point(this);
+        this.moveBy(this.direction);
+        this.collideLine2d(wall);
+        this.collideWithinBounds(bound);
       }
     }
 
@@ -89,8 +105,9 @@ class Background extends React.Component {
     //// 3. Visualize, Animate, Interact
     space.add({
       animate: function(time, fps, context) {
-        if(time - lastTime > 40){
+        if(time - lastTime > 20){
           space.add(new Particle(space.center.x, space.center.y, 10));
+          //space.add(new ParticleTrack(space.center.x, space.center.y, 10));
           lastTime = time;
         }
       },

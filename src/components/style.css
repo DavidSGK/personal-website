@@ -60,12 +60,28 @@
 }
 
 .title {
-  font-family: 'Josefin Slab', serif;
-  font-size: 600%;
+  font-family: 'Futura', sans-serif;
+  font-size: 500%;
+}
+
+.subtitle {
+  font-size: 200%;
 }
 
 .section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+}
+
+.section-wrapper:hover .tile-img {
+  width: 30%;
+  transition: 0.5s all ease;
+}
+
+.section-wrapper .tile-img {
+  transition: 0.5s all ease;
 }
 
 .section-content {
@@ -121,4 +137,9 @@
 .background-wrapper > div {
   position: absolute;
   z-index: 2;
+}
+
+.tile-img {
+  width: 40%;
+  opacity: 0.5;
 }

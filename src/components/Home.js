@@ -21,20 +21,12 @@ class Home extends React.Component {
   render() {
     return (
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
-        <div className="title-wrapper">
-          <div className="title"><strong>David</strong> Kang</div>
-          <div className="bar" />
-          <h1>curious. creative. committed.</h1>
-        </div>
-        <div className="gap-5" />
-        <p>{bio}</p>
-          {/*<div className="profile">
-            <img src={profilePicPath} style={{overflow: "hidden"}} />
-          </div>*/}
-        <div style={{fontSize: "500%", fontFamily: "Futura"}}><strong>David</strong> Kang</div>
+        <div className="title"><strong>David</strong> Kang</div>
         <div style={{fontSize: "200%"}}>|dey-vid kæng|</div>
         <div className="gap-5" />
         <p><i>n.</i> {defText}</p>
+        <br />
+        <p><i>see also.</i> curious, creative, committed</p>
       </div>
     );
   }
