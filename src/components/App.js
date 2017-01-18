@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       names: ["Projects", "Resume", "Blog", "Connect"],
       colors: [Colors.fresh, Colors.rustyRed, Colors.vermillion, Colors.sunshine],
-      links: ["about", "about", "about", "about"]
+      links: ["projects", "about", "blog", "connect"]
     };
     this.tileGen = this.tileGen.bind(this);
   }

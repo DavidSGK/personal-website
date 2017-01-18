@@ -30,6 +30,7 @@
   width: 80%;
   height: 75%;
   padding: 5%;
+  overflow-y: auto;
   /*
   background-image: url('../assets/profile-traced.png');
   background-repeat: no-repeat;
@@ -76,12 +77,12 @@
 }
 
 .section-wrapper:hover .tile-img {
-  width: 30%;
-  transition: 0.5s all ease;
+  width: 25%;
+  transition: 0.2s all ease;
 }
 
 .section-wrapper .tile-img {
-  transition: 0.5s all ease;
+  transition: 0.2s all ease;
 }
 
 .section-content {
@@ -140,6 +141,22 @@
 }
 
 .tile-img {
-  width: 40%;
+  width: 30%;
   opacity: 0.5;
+}
+
+.social {
+  max-width: 20%;
+}
+
+.social-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.social-container a {
+  width: 20%;
+  height: width;
 }
