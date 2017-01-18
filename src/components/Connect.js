@@ -7,6 +7,10 @@ const githubImg = require('../assets/github.svg');
 const linkedinImg = require('../assets/linkedin.svg');
 const emailImg = require('../assets/email.svg');
 
+function bgUrl(img){
+  return "url(" + img + ")";
+}
+
 class Connect extends React.Component {
   constructor(props){
     super(props);
@@ -18,15 +22,15 @@ class Connect extends React.Component {
     return(
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
         <div className="social-container">
-          <a href="https://github.com">
-            <img src={githubImg} className="social" />
-          </a>
-          <a href="https://linkedin.com">
-            <img src={linkedinImg} className="social" />
-          </a>
-          <a href="mailto:davidsgkang@gmail.com">
-            <img src={emailImg} className="social" />
-          </a>
+            <div style={{backgroundImage: bgUrl(githubImg)}}>
+              <a href="https://github.com" />
+            </div>
+            <div style={{backgroundImage: bgUrl(linkedinImg)}}>
+              <a href="https://linkedin.com" />
+            </div>
+            <div style={{backgroundImage: bgUrl(emailImg)}}>
+              <a href="mailto:davidsgkang@gmail.com" />
+            </div>
         </div>
       </div>
     )
