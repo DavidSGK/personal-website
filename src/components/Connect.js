@@ -26,13 +26,13 @@ class Connect extends React.Component {
           <div className="gap-5" />
           <div className="social-container">
               <div style={{backgroundImage: bgUrl(githubImg)}}>
-                <a href="https://github.com" />
+                <a href="https://github.com/davidsgk" target="_blank" />
               </div>
               <div style={{backgroundImage: bgUrl(linkedinImg)}}>
-                <a href="https://linkedin.com" />
+                <a href="https://ca.linkedin.com/in/davidsgk" target="_blank" />
               </div>
               <div style={{backgroundImage: bgUrl(emailImg)}}>
-                <a href="mailto:davidsgkang@gmail.com" />
+                <a href="mailto:davidsgkang@gmail.com" target="_blank" />
               </div>
           </div>
         </div>

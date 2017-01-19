@@ -27,7 +27,7 @@ class App extends React.Component {
         <div className="main-panel" style={{backgroundColor: Colors.blueGrey}}>
           <Background onCanvas={this.props.children} />
         </div>
-        <div className="side-panel">
+        <div className="navbar">
           {this.state.names.map(this.tileGen)}
         </div>
       </div>

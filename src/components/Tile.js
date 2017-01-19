@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 import './style.css';
 
-const resumePath = require('../assets/V3.pdf');
+const resumePath = require('../assets/Resume.pdf');
 const aboutImg = require('../assets/About.svg');
 const projectImg = require('../assets/Projects.svg');
 const resumeImg = require('../assets/Resume.svg');
