@@ -21,16 +21,20 @@ class Connect extends React.Component {
   render(){
     return(
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
-        <div className="social-container">
-            <div style={{backgroundImage: bgUrl(githubImg)}}>
-              <a href="https://github.com" />
-            </div>
-            <div style={{backgroundImage: bgUrl(linkedinImg)}}>
-              <a href="https://linkedin.com" />
-            </div>
-            <div style={{backgroundImage: bgUrl(emailImg)}}>
-              <a href="mailto:davidsgkang@gmail.com" />
-            </div>
+        <div className="connect-container">
+          <div className="centered-text">Want to talk? Hit me up!</div>
+          <div className="gap-5" />
+          <div className="social-container">
+              <div style={{backgroundImage: bgUrl(githubImg)}}>
+                <a href="https://github.com" />
+              </div>
+              <div style={{backgroundImage: bgUrl(linkedinImg)}}>
+                <a href="https://linkedin.com" />
+              </div>
+              <div style={{backgroundImage: bgUrl(emailImg)}}>
+                <a href="mailto:davidsgkang@gmail.com" />
+              </div>
+          </div>
         </div>
       </div>
     )

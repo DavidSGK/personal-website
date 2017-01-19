@@ -9,13 +9,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      names: ["Projects", "Resume", "Blog", "Connect"],
-      colors: [Colors.fresh, Colors.rustyRed, Colors.vermillion, Colors.sunshine],
-      links: ["projects", "about", "blog", "connect"]
+      names: ["About", "Projects", "Resume", "Blog", "Connect"],
+      colors: [Colors.teal, Colors.fresh, Colors.magenta, Colors.vermillion, Colors.sunshine],
+      links: ["/" ,"projects", "resume", "blog", "connect"]
     };
     this.tileGen = this.tileGen.bind(this);
   }
   tileGen(x, i){
+    /*if(this.props.location.pathname !== "/" + this.state.links[i] && this.props.location.pathname !== this.state.links[i]){
+      return(<Tile name={x} color={this.state.colors[i]} link={this.state.links[i]} key={i} />);
+    }*/
     return(<Tile name={x} color={this.state.colors[i]} link={this.state.links[i]} key={i} />);
   }
   render() {

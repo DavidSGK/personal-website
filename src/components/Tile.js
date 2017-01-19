@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 import './style.css';
 
 const resumePath = require('../assets/V3.pdf');
+const aboutImg = require('../assets/About.svg');
 const projectImg = require('../assets/Projects.svg');
 const resumeImg = require('../assets/Resume.svg');
 const blogImg = require('../assets/Blog.svg');
@@ -11,6 +12,7 @@ const connectImg = require('../assets/Connect.svg');
 
 function whichImg(name){
   switch(name){
+    case "About": return aboutImg;
     case "Projects": return projectImg;
     case "Resume": return resumeImg;
     case "Blog": return blogImg;

@@ -129,6 +129,8 @@
 }
 
 .background-wrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
   position: relative;
   justify-content: center;
@@ -145,6 +147,15 @@
   opacity: 0.5;
 }
 
+.connect-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .social {
   max-height: 100%;
 }
@@ -154,7 +165,7 @@
   height: 20%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .social-container div {
@@ -168,4 +179,9 @@
   display: inline-block;
   width: 100%;
   height: 100%;
+}
+
+.centered-text {
+  font-size: 200%;
+  text-align: center;
 }

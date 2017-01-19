@@ -13,7 +13,7 @@ class Projects extends React.Component {
   render(){
     return(
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
-        Projects
+        <div className="title"><strong>Projects</strong></div>
       </div>
     )
   }

@@ -27,19 +27,6 @@ class Background extends React.Component {
 
     var particles = [];
 
-
-    //// 2. Create Elements
-
-    /*// A Dust is a kind of Vector
-    function Dust() {
-      Pt.Vector.apply( this, arguments ); // call Vector's constructor
-      this.age = 0;
-      this.maxAge = Math.random() * 500 + 50;
-      //this.weight =  0.25 + Math.random()*3;
-      this.color = colors["a"+Math.ceil(Math.random()*4)];
-    }
-    Pt.Util.extend( Dust, Pt.Vector ); // extends Vector class*/
-
     class Particle extends Pt.Triangle {
       constructor(x, y, length){
         super(x, y);
@@ -77,29 +64,6 @@ class Background extends React.Component {
       }
     }
 
-    /*// define an animate function so it can be animated when added into Space
-    Dust.prototype.animate = function(time, fps, context) {
-
-      // drift movement
-      //this.add( rand(1), (Math.random() - Math.random()*(1-this.weight/1.5)) );
-
-      // remove when done
-      //if (this.age++ > this.maxAge) space.remove(this);
-
-      // glitter
-      var gray = (this.maxAge-this.age)/this.maxAge * 0.4;
-      gray = Math.max(0, Math.min( 0.6, (Math.random() > 0.5) ? gray + 0.05 : gray - 0.05 ) );
-
-      // draw dust
-      //form.fill(this.color);
-      //form.point( this, this.weight, true );
-      //form.triangle(this);
-
-    };*/
-
-    // a helper function for randomness
-    function rand(r) { return Math.random() * r - Math.random() * r; }
-
     var lastTime = 0;
 
     //// 3. Visualize, Animate, Interact
@@ -111,24 +75,8 @@ class Background extends React.Component {
           lastTime = time;
         }
       },
-
-      /*onMouseAction: function(type, x, y, evt) {
-        // When mouse moved, add two dust into space
-        if (type === "move") {
-          //space.add( new Dust( x+rand(5), y+rand(5) ) );
-          //space.add( new Dust( x+rand(5), y+rand(5) ) );
-          space.add(new Particle(space.center.x, space.center.y, 10));
-        }
-      },
-
-      onTouchAction: function(type, x, y, evt) {
-        this.onMouseAction( type, x, y );
-      }*/
     });
 
-    // 4. Start playing
-    space.bindMouse();
-    space.bindTouch();
     space.play();
 
     //var particles = [];

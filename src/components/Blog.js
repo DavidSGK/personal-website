@@ -13,7 +13,7 @@ class Blog extends React.Component {
   render(){
     return(
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
-        Blog
+        <div className="title"><strong>Blog</strong></div>
       </div>
     )
   }
