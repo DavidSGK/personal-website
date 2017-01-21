@@ -8,6 +8,8 @@ import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Connect from './components/Connect';
 
+import BlogPost from './components/BlogPost';
+
 class Routes extends React.Component {
   constructor(props){
     super(props);
@@ -24,6 +26,7 @@ class Routes extends React.Component {
           <Route path="projects" component={Projects} />
           <Route path="blog" component={Blog} />
           <Route path="connect" component={Connect} />
+          <Route path="post/:test" component={BlogPost} />
         </Route>
       </Router>
     );

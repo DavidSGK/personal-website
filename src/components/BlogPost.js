@@ -1,10 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router';
 
 import './style.css';
 import Colors from '../constants/colors';
 
-class Blog extends React.Component {
+class BlogPost extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -12,13 +11,13 @@ class Blog extends React.Component {
     }
   }
   render(){
+    console.log(this.props.params);
     return(
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
-        <div className="title"><strong>Blog</strong></div>
-        <h1>Content is on its way!</h1>
+        {this.props.params.test}
       </div>
-    )
+    );
   }
 }
 
-export default Blog;
+export default BlogPost;
