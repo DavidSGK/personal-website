@@ -1,16 +1,16 @@
 {
-  "main.css": "static/css/main.9c6f8a2a.css",
-  "main.css.map": "static/css/main.9c6f8a2a.css.map",
-  "main.js": "static/js/main.1cdd02b1.js",
-  "main.js.map": "static/js/main.1cdd02b1.js.map",
+  "main.css": "static/css/main.e7490c9f.css",
+  "main.css.map": "static/css/main.e7490c9f.css.map",
+  "main.js": "static/js/main.50e0254b.js",
+  "main.js.map": "static/js/main.50e0254b.js.map",
   "static/media/About.svg": "static/media/About.f3cc1a1f.svg",
   "static/media/Blog.svg": "static/media/Blog.e347d594.svg",
   "static/media/Connect.svg": "static/media/Connect.a5d28eaf.svg",
+  "static/media/EOT1-3.png": "static/media/EOT1-3.a43b3e09.png",
   "static/media/Projects.svg": "static/media/Projects.00e1d3ea.svg",
-  "static/media/Resume.pdf": "static/media/Resume.23cca1f8.pdf",
+  "static/media/Resume.pdf": "static/media/Resume.a495bdad.pdf",
   "static/media/Resume.svg": "static/media/Resume.9e9a5eea.svg",
   "static/media/email.svg": "static/media/email.200acc6c.svg",
   "static/media/github.svg": "static/media/github.20bfd933.svg",
-  "static/media/linkedin.svg": "static/media/linkedin.569a3c95.svg",
-  "static/media/profile-traced.png": "static/media/profile-traced.9df59562.png"
+  "static/media/linkedin.svg": "static/media/linkedin.569a3c95.svg"
 }
