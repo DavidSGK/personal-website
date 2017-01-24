@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import './style.css';
+import Footer from './Footer';
 import Colors from '../constants/colors';
 
 class Blog extends React.Component {
@@ -14,8 +15,9 @@ class Blog extends React.Component {
   render(){
     return(
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
-        <div className="title"><strong>Blog</strong></div>
+        <div className="title">Blog</div>
         <h1>Content is on its way!</h1>
+        <Footer />
       </div>
     )
   }

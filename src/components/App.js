@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tile from './Tile';
-import Background from './Background'
+import Background from './Background';
 import Colors from '../constants/colors';
 import './style.css';
 

@@ -13,8 +13,6 @@ class Background extends React.Component {
   componentDidMount(){
 
     var space = new Pt.CanvasSpace("pt").setup({bgcolor: Colors.blueGrey});
-    var wall = new Pt.Line(space.size.$multiply(0.33, 0.33)).to(space.size.$multiply(0.66, 0.66));
-    var bound = new Pt.Pair().to(space.size);
 
     var form = new Pt.Form(space);
     form.stroke(false);

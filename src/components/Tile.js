@@ -17,6 +17,7 @@ function whichImg(name){
     case "Resume": return resumeImg;
     case "Blog": return blogImg;
     case "Connect": return connectImg;
+    default: return;
   }
 }
 
@@ -31,7 +32,7 @@ class Tile extends React.Component {
     if(this.props.name === "Resume"){
       return(
         <a href={resumePath} className="side-tile section-wrapper" style={{backgroundColor: this.props.color}}>
-          <img src={whichImg(this.props.name)} className="tile-img" />
+          <img src={whichImg(this.props.name)} className="tile-img" role="presentation" />
           <div className="section-content">
             {this.props.name}
             <div className="bar" />
@@ -41,7 +42,7 @@ class Tile extends React.Component {
     } else {
       return(
         <Link to={this.props.link} className="side-tile section-wrapper" style={{backgroundColor: this.props.color}}>
-          <img src={whichImg(this.props.name)} className="tile-img" />
+          <img src={whichImg(this.props.name)} className="tile-img" role="presentation" />
           <div className="section-content">
             {this.props.name}
             <div className="bar" />
@@ -52,4 +53,4 @@ class Tile extends React.Component {
   }
 }
 
-export default Tile
+export default Tile;

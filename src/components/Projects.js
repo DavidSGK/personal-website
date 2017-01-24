@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './style.css';
+import Footer from './Footer';
 import Colors from '../constants/colors';
 
 const projectsJSON = require('../text/projects.json');
@@ -34,8 +35,9 @@ class Projects extends React.Component {
   render(){
     return(
       <div className="main-tile" style={{backgroundColor: Colors.almostWhite}}>
-        <div className="title"><strong>Projects</strong></div>
+        <div className="title">Projects</div>
         <div className="project-list">{this.output(projects)}</div>
+        <Footer />
       </div>
     )
   }
