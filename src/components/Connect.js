@@ -2,6 +2,7 @@ import React from 'react';
 
 import './style.css';
 import Colors from '../constants/colors';
+import Footer from './Footer';
 
 const githubImg = require('../assets/github.svg');
 const linkedinImg = require('../assets/linkedin.svg');
@@ -36,6 +37,7 @@ class Connect extends React.Component {
               </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }
