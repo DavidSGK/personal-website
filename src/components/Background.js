@@ -10,7 +10,7 @@ class Background extends React.Component {
 
     }
   }
-  componentDidMount(){
+  /*componentDidMount(){
 
     var space = new Pt.CanvasSpace("pt").setup({bgcolor: Colors.blueGrey});
 
@@ -41,21 +41,7 @@ class Background extends React.Component {
         }
       }
     }
-    /*
-    class ParticleTrack extends Pt.Particle {
-      constructor(x, y, radius){
-        super(x, y, radius);
-        this.direction = new Pt.Vector((Math.random()-0.5) * 5, (Math.random()-0.5) * 5);
-      }
-      animate(time, fps, context){
-        form.fill("#FFFFFF");
-        form.point(this);
-        this.moveBy(this.direction);
-        this.collideLine2d(wall);
-        this.collideWithinBounds(bound);
-      }
-    }
-    */
+    
     var lastTime = 0;
 
     space.add({
@@ -76,7 +62,7 @@ class Background extends React.Component {
       particles.push(new Particle(space.center.x, space.center.y, 10));
       space.add(particles[i]);
     }
-  }
+  }*/
   render(){
     return(
       <div id="pt" className="background-wrapper">
